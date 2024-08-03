@@ -10,10 +10,11 @@ Give the link to your video demo. Read the video demo section below to understan
 # Installation
 
 1. Set up MySQL, MongoDb and Neo4j databases following MP3 assignment instructions
-2. Update connection configs in .env file
-3. install nodejs v20.11.1 +
-4. `npm install`
-4. `npm run dev`
+2. Run all scripts in `initial-scripts/`
+3. Update connection configs in `.env` file
+4. install nodejs v20.11.1 +
+5. `npm install`
+6. `npm run dev`
 
 
 # Usage
@@ -46,11 +47,11 @@ I chose to work individually.
 - [] R7: MongoDB used
 - [X] R8: Neo4j used
 - [] R9: 6 widgets
-- [] R10: two widgets that manipulate database
-- [] R11: four widgets that take input from users
+- [X] R10: two widgets that manipulate database
+- [X] R11: four widgets that take input from users
 - [X] R12: visual layout using grids and bootstrap
 - [X] R13: Prepared statement used 
-- [X] R14: REST API used
-- [] R15: 
+- [X] R14: REST API used for accessing database
+- [X] R15: Trigger used
 
 

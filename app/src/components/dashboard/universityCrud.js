@@ -35,6 +35,7 @@ function DashboardUniversityCrud() {
 
   const onCreateUniversityCrud = () => {
     let id = 0;
+    let name = universityNameCrud;
 
     fetch(`api/institute/`, {
       method: "POST",
@@ -56,6 +57,7 @@ function DashboardUniversityCrud() {
 
         return response.json().then((data) => {
           id = data.id;
+          name = data.name;
           return data;
         });
       })
@@ -68,7 +70,7 @@ function DashboardUniversityCrud() {
 
         setSelectedUniversity({
           value: id,
-          label: universityNameCrud,
+          label: name,
         });
 
         fetch(`api/institute/${id}/`)
