@@ -5,6 +5,6 @@ const driver = neo4j.driver(
   neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD)
 );
 
-const getSession = () => driver.session({ database: 'academicworld' });
+const getSession = () => driver.session({ database: process.env.NEO4J_DB_NAME });
 
 module.exports = { getSession };

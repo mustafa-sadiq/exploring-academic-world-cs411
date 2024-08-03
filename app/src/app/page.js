@@ -5,6 +5,7 @@ import DashboardTopKeywords from "@/components/dashboard/topKeyword";
 import DashboardCommonKeywords from "@/components/dashboard/commonKeywords";
 import DashboardFacultyCrud from "@/components/dashboard/facultyCrud";
 import DashboardUniversityCrud from "@/components/dashboard/universityCrud";
+import DashboardTopKeywordsByFaculty from "@/components/dashboard/topKeywordsByFaculty";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
           <DashboardCommonKeywords />
           <DashboardFacultyCrud />
           <DashboardUniversityCrud />
+          <DashboardTopKeywordsByFaculty />
         </div>
       </div>
     </main>
