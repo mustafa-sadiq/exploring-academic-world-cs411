@@ -5,15 +5,16 @@ import { URL } from "url";
 export async function GET(request) {
   const url = new URL(request.url);
   const id = url.pathname.split("/").pop();
-  console.log(id);
 
   const session = getSession();
-const result =
-    await session.run(`MATCH (f:FACULTY)-[:AFFILIATION_WITH]->(i:INSTITUTE {id: $id})
+  const result = await session.run(
+    `MATCH (f:FACULTY)-[:AFFILIATION_WITH]->(i:INSTITUTE {id: $id})
                                                     MATCH (f)-[:PUBLISH]->(p:PUBLICATION)-[:LABEL_BY]->(k:KEYWORD)
                                                     RETURN k.name AS Keyword, COUNT(k) AS Occurrences
                                                     ORDER BY Occurrences DESC
-                                                    LIMIT 10;`, { id });
+                                                    LIMIT 10;`,
+    { id }
+  );
 
   const records = result.records.map((record) => {
     return {
