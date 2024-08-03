@@ -1,29 +1,53 @@
 import { NextResponse } from "next/server";
-import { getSession } from "../../../../lib/neo4j_libs";
+import { query } from "../../../../lib/mysql_libs";
 import { URL } from "url";
 
 export async function GET(request) {
   const url = new URL(request.url);
   const id = url.pathname.split("/").pop();
 
-  const session = getSession();
-  const result = await session.run(
-    `MATCH (f:FACULTY)-[:AFFILIATION_WITH]->(i:INSTITUTE {id: $id})
-                                                    MATCH (f)-[:PUBLISH]->(p:PUBLICATION)-[:LABEL_BY]->(k:KEYWORD)
-                                                    RETURN k.name AS Keyword, COUNT(k) AS Occurrences
-                                                    ORDER BY Occurrences DESC
-                                                    LIMIT 10;`,
-    { id }
-  );
+  const records = await query(`SELECT * FROM university WHERE id = ?`, [id]);
 
-  const records = result.records.map((record) => {
-    return {
-      Keyword: record.get("Keyword"),
-      Occurrences: record.get("Occurrences").low,
-    };
-  });
-
-  session.close();
-
-  return NextResponse.json(records, { status: 200 });
+  return NextResponse.json(records[0], { status: 200 });
 }
+
+export async function DELETE(request) {
+  const url = new URL(request.url);
+  const id = url.pathname.split("/").pop();
+
+  try {
+    await query(`DELETE FROM university WHERE id = ?`, [id]);
+    return NextResponse.json({ message: "Record deleted" }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: error.message }, { status: 400 });
+  }
+}
+
+
+export async function PUT(request) {
+  const url = new URL(request.url);
+  const id = url.pathname.split("/").pop();
+
+  const body = await request.json();
+
+  try {
+    const setClause = Object.keys(body)
+      .map(key => `${key} = ?`)
+      .join(", ");
+    const values = [...Object.values(body), id];
+
+    // Update the record
+    await query(`UPDATE university SET ${setClause} WHERE id = ?`, values);
+    const updatedRecords = await query(`SELECT * FROM university WHERE id = ?`, [id]);
+    
+
+    return NextResponse.json(updatedRecords[0], { status: 200 });
+    
+    
+  } catch (error) { 
+    return NextResponse.json({ message: error.message }, { status: 400 });    
+  }
+
+  
+}
+

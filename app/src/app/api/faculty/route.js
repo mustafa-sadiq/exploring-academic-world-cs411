@@ -22,7 +22,7 @@ export async function POST(request) {
       body.email ?? null,
       body.phone ?? null,
       body.photo_url ?? null,
-      body.univeristy_id ?? null,
+      body.university_id ?? null,
     ];
 
     await query(`INSERT INTO faculty (id, name, position, research_interest, email, phone, photo_url, university_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`, values);
