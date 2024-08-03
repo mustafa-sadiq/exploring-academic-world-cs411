@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Select from "react-select";
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function Home() {
   const yearOptions = [
@@ -286,14 +287,14 @@ export default function Home() {
 
   return (
     <main>
-      <div className="container mt-4">
+      <div className="container mt-4 mb-5">
         <h1 className="text-center">
           Mustafa Sadiq CS411 - Exploring academic world
         </h1>
 
         <div className="row row-cols-1 row-cols-md-2 mt-4 g-4">
           <div className="col">
-            <div className="card">
+            <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">Live counts</h5>
                 <div className="card-text">
@@ -327,7 +328,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col">
-            <div className="card">
+            <div className="card h-100">
               <div className="card-body">
                 <h5 className="card-title">
                   Top 10 Keywords by Publication Count by Year
@@ -363,12 +364,14 @@ export default function Home() {
             </div>
           </div>
           <div className="col">
-            <div className="card h-50">
+            <div className="card h-75">
               <div className="card-body">
-                <h5 className="card-title">
-                  Most common keywords among publications authored by faculty
-                  members affiliated with a specific institute
-                </h5>
+                <div className="card-title">
+                  <h4>What are institutes publishing?</h4>
+                  <h5>Most common keywords among publications authored by faculty
+                  members affiliated with a specific institute</h5>
+                  
+                </div>
                 <div className="card-text">
                   <Select
                     id="institute-select"
@@ -492,13 +495,24 @@ export default function Home() {
                         <label htmlFor="photoUrl" className="form-label">
                           Photo URL
                         </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="photoUrl"
-                          value={facultyPhotoUrlCrud}
-                          onChange={onChangeFacultyPhotoUrlCrud}
-                        />
+                        <div className="d-flex align-items-center">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="photoUrl"
+                            value={facultyPhotoUrlCrud}
+                            onChange={onChangeFacultyPhotoUrlCrud}
+                          />
+                          {facultyPhotoUrlCrud && (
+                            <a
+                              href={facultyPhotoUrlCrud}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaExternalLinkAlt className="ms-2" />
+                            </a>
+                          )}
+                        </div>
                       </div>
                       <div className="mb-3">
                         <label htmlFor="universityId" className="form-label">
