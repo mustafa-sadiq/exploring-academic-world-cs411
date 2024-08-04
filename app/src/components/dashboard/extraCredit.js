@@ -39,7 +39,7 @@ function DashboardExtraCredit() {
               <input type="text" className="form-control" id="facultyId" onChange={(e) => setFacultyId(e.target.value)} />
             </div>
 
-            <button className="btn btn-primary" onClick={onClickGetData}>Get data</button>
+            <button className="btn btn-primary" onClick={onClickGetData}>Get more information</button>
 
             {loadingIndicator && <div className="spinner-border text-primary" role="status">
                 <span className="visually-hidden">Loading...</span>
