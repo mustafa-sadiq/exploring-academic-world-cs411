@@ -71,7 +71,7 @@ This widget displays the top 10 keywords that have the most aggregate score (sum
 
 ![Image](static/widget7.png)
 
-This widget displays a summary about the selected faculty including a summary about their research focus. It also provides a link to their profile or portfolio page. Enter a `faculty` id to get more information about them. You can get a faculty id from the faculty CRUD widget.
+This widget displays a summary about the selected faculty including a summary about their research focus. It also provides a link to their profile or portfolio page. Enter a `faculty` id to get more information about them. You can get a faculty id from the faculty CRUD widget. It is useful to quickly know more about a faculty member.
 
 This widget sources data from MySQL to get faculty.name and faculty.University.name and then calls OpenAI API to get a summary.
 
