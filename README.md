@@ -5,7 +5,9 @@ Academic World exploration by Mustafa Sadiq
 Explore Academic World dataset. Be able to apply CRUD operations. Visualize and analyze.
 
 # Demo
-Give the link to your video demo. Read the video demo section below to understand what contents are expected in your demo.
+Vide demo hosted on Illinois Media Space
+
+https://mediaspace.illinois.edu/media/t/1_i5nljr0x
 
 # Installation
 
@@ -50,6 +52,8 @@ This widget allows to Create/Read/Update/Delete any `faculty` record. This widge
 - Update: Select any faculty from dropdown to read its attributes. Update any values and click `Update` to update its record.
 - Delete: Select any faculty from dropdown. Click `Delete` to delete its record.
 
+If you try to enter any value against fk constraints or deleting a fk constraints record, it will show you an error.
+
 ### Widget 5
 
 ![Image](static/widget5.png)
@@ -60,6 +64,8 @@ This widget allows to Create/Read/Update/Delete any `university` record. This wi
 - Read: Select any university from dropdown to read its attributes
 - Update: Select any university from dropdown to read its attributes. Update any values and click `Update` to update its record.
 - Delete: Select any university from dropdown. Click `Delete` to delete its record.
+
+If you try to enter any value against fk constraints or deleting a fk constraints record, it will show you an error.
 
 ### Widget 6
 
@@ -74,6 +80,8 @@ This widget displays the top 10 keywords that have the most aggregate score (sum
 This widget displays a summary about the selected faculty including a summary about their research focus. It also provides a link to their profile or portfolio page. Enter a `faculty` id to get more information about them. You can get a faculty id from the faculty CRUD widget. It is useful to quickly know more about a faculty member.
 
 This widget sources data from MySQL to get faculty.name and faculty.University.name and then calls OpenAI API to get a summary.
+
+If you try to enter a faculty Id which does not exist, it will show you an error.
 
 
 # Design
