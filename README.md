@@ -21,12 +21,59 @@ Give the link to your video demo. Read the video demo section below to understan
 # Usage
 
 ### Widget 1
+
+![Image](static/widget1.png)
+
+This widget displays a live count of the records. Click `Refresh` to update counts. It is useful to track what and how many records do hold. This widget sources data from MySQL.
+
 ### Widget 2
+
+![Image](static/widget2.png)
+
+This widget displays the top 10 keywords that have the most publications by year. The number of publications by keyword is in blue. Change `year` to update data accordingly. It is useful how research changed over the years e.g. in 2004 it used to be about 'internet' and in 2021 its about 'deep-learning'. This widget sources data from MySQL.
+
+
 ### Widget 3
+
+![Image](static/widget3.png)
+
+This widget displays the top 10 keywords that have the most publications by university. The number of publications by keyword is in blue. Change `university` to update data accordingly. It is useful to know a university focus and see how research focus changes from university to university e.g. Yeshiva University focus on medical research and Carnegie Mellon University focuses on computer science. This widget sources data from Neo4j including the dropdown values.
+
 ### Widget 4
+
+![Image](static/widget4.png)
+
+This widget allows to Create/Read/Update/Delete any `faculty` record. This widget sources and updates data from and to MySQL including the dropdown values.
+
+- Create: Press + icon to create a new record. Enter details and then click `Create`
+- Read: Select any faculty from dropdown to read its attributes
+- Update: Select any faculty from dropdown to read its attributes. Update any values and click `Update` to update its record.
+- Delete: Select any faculty from dropdown. Click `Delete` to delete its record.
+
 ### Widget 5
+
+![Image](static/widget5.png)
+
+This widget allows to Create/Read/Update/Delete any `university` record. This widget sources and updates data from and to MySQL including the dropdown values.
+
+- Create: Press + icon to create a new record. Enter details and then click `Create`
+- Read: Select any university from dropdown to read its attributes
+- Update: Select any university from dropdown to read its attributes. Update any values and click `Update` to update its record.
+- Delete: Select any university from dropdown. Click `Delete` to delete its record.
+
 ### Widget 6
+
+![Image](static/widget6.png)
+
+This widget displays the top 10 keywords that have the most aggregate score (sum of scores) by faculty. The score by keyword is in blue. Change `faculty` to update data accordingly. It is useful to know a faculty focus and see how research focus changes from faculty to faculty. This widget sources data from MongoDB including the dropdown values.
+
 ### Widget 7
+
+![Image](static/widget7.png)
+
+This widget displays a summary about the selected faculty including a summary about their research focus. It also provides a link to their profile or portfolio page. Enter a `faculty` id to get more information about them. You can get a faculty id from the faculty CRUD widget.
+
+This widget sources data from MySQL to get faculty.name and faculty.University.name and then calls OpenAI API to get a summary.
 
 
 # Design
