@@ -11,30 +11,72 @@ Give the link to your video demo. Read the video demo section below to understan
 
 1. Set up MySQL, MongoDb and Neo4j databases following MP3 assignment instructions
 2. Run all scripts in `initial-scripts/`
-3. Update connection configs in `.env` file
+3. Update connection configs in `app/.env` file and add OpenAI key
 4. install nodejs v20.11.1 +
-5. `npm install`
-6. `npm run dev`
+5. cd to `/app`
+6. `npm install`
+7. `npm run dev`
 
 
 # Usage
-How to use it? 
+
+### Widget 1
+### Widget 2
+### Widget 3
+### Widget 4
+### Widget 5
+### Widget 6
+### Widget 7
+
 
 # Design
-What is the design of the application? Overall architecture and components. 
+This is a NextJS application for frontend and backend. The frontend interacts with backend using Rest APIs developed in NextJS /api/ routes. The backend interacts with MySQL, MongoDB and Neo4j databases. The backend also interacts with OpenAI for extra credit capabilities.
+
+![Image](static/design.drawio.png)
+
 
 # Implementation
-How did you implement it? What frameworks and libraries or any tools have you used to realize the dashboard and functionalities? 
+I used NextJS to implement both backend and frontend. The frontend is pure client side components which interact with backend using REST APIs.
+Libraries that I used, installed using npm:
+
+- bootstrap (for styling)
+- dotenv (to manage environment variables)
+- mongodb
+- mysql2
+- neo4j-driver
+- next
+- openai (for extra credit)
+- react
+- react-dom
+- react-icons (for external link icon on photo_urls)
+- react-select (for various dropdowns)
+
+
 
 # Database Techniques
 What database techniques have you implemented? How? 
 
+I have implemented the following database techniques:
+
+### Prepared statements
+I have used prepared statements i.e. ? and then passing in values as argument to query interface. This improves readibility and security, by separating out SQL statements from values, and preventing SQL Injections.
+
+### Triggers
+I have used a trigger `/initial-scripts/mysql.sql` to uppercase all University.name on insert.
+
+### Joins
+I have used multiple joins throughout different endpoints.
+
+
 # Extra-Credit Capabilities
-What extra-credit capabilities have you developed if any? 
+I have developed an extra credit capability. Given a faculty Id, I use OpenAI to extract information regarding the faculty memeber including
+
+- A summary about them
+- A summary related to their research
+- A link to their portfolio or public page
 
 # Contributions
 I chose to work individually.
-
 
 # Requirement tracking
 

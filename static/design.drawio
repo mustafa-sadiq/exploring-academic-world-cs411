@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" modified="2024-08-04T00:52:34.896Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" etag="96kicFGHmVcBcdzTOomg" version="24.6.2" type="device">
+  <diagram name="Page-1" id="bZrWHHfOqYR0tAtIcrwm">
+    <mxGraphModel dx="1554" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-2" value="Neo4j" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="120" y="460" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-3" value="MySQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="220" y="460" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-4" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="330" y="460" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OC0dlDdywCvxvgx8Ui4k-7" target="OC0dlDdywCvxvgx8Ui4k-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-13" value="REST APIs" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OC0dlDdywCvxvgx8Ui4k-12">
+          <mxGeometry x="0.2" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-7" value="Frontend (using Next.js)&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/material-core/18/drive-site-128.png" vertex="1" parent="1">
+          <mxGeometry x="476" y="20" width="128" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OC0dlDdywCvxvgx8Ui4k-8" target="OC0dlDdywCvxvgx8Ui4k-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OC0dlDdywCvxvgx8Ui4k-8" target="OC0dlDdywCvxvgx8Ui4k-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OC0dlDdywCvxvgx8Ui4k-8" target="OC0dlDdywCvxvgx8Ui4k-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-8" value="Backend (using Next.js)" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/infrastructure/mobile_backend.svg;" vertex="1" parent="1">
+          <mxGeometry x="510" y="248" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="OC0dlDdywCvxvgx8Ui4k-8" target="OC0dlDdywCvxvgx8Ui4k-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OC0dlDdywCvxvgx8Ui4k-14" value="OpenAI" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="720" y="350" width="50" height="48" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
