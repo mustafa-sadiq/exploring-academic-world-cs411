@@ -17,6 +17,10 @@ export async function GET(request) {
     [facultyId]
   );
 
+  if (records.length === 0) {
+    return NextResponse.json("Faculty not found", { status: 404 });
+  }
+
   const q = records[0].name + " " + records[0].university;
 
   const completion = await openai.chat.completions.create({
