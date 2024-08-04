@@ -135,7 +135,7 @@ I chose to work individually.
 
 - [X] R1: Code repo setup
 - [X] R2: Report/Readme setup
-- [ ] R3: Video demo recorded and uploaded
+- [X] R3: Video demo recorded and uploaded
 - [X] R4: Useful and beneficial insights
 - [X] R5: Cool!
 - [X] R6: MySQL used
