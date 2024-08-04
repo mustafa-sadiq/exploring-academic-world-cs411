@@ -54,8 +54,6 @@ Libraries that I used, installed using npm:
 
 
 # Database Techniques
-What database techniques have you implemented? How? 
-
 I have implemented the following database techniques:
 
 ### Prepared statements
@@ -64,8 +62,8 @@ I have used prepared statements i.e. ? and then passing in values as argument to
 ### Triggers
 I have used a trigger `/initial-scripts/mysql.sql` to uppercase all University.name on insert.
 
-### Joins
-I have used multiple joins throughout different endpoints.
+### REST APIs
+I have used REST APIs through which the frontend interacts with backend and which wraps the databases.
 
 
 # Extra-Credit Capabilities
