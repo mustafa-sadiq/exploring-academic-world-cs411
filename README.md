@@ -80,13 +80,13 @@ I chose to work individually.
 
 - [X] R1: Code repo setup
 - [X] R2: Report/Readme setup
-- [] R3: Video demo recorded and uploaded
+- [ ] R3: Video demo recorded and uploaded
 - [X] R4: Useful and beneficial insights
 - [X] R5: Cool!
 - [X] R6: MySQL used
-- [] R7: MongoDB used
+- [X] R7: MongoDB used
 - [X] R8: Neo4j used
-- [] R9: 6 widgets
+- [X] R9: 6 widgets
 - [X] R10: two widgets that manipulate database
 - [X] R11: four widgets that take input from users
 - [X] R12: visual layout using grids and bootstrap
