@@ -5,7 +5,7 @@ Academic World exploration by Mustafa Sadiq
 Explore Academic World dataset. Be able to apply CRUD operations. Visualize and analyze.
 
 # Demo
-Vide demo hosted on Illinois Media Space
+Video demo hosted on Illinois Media Space
 
 https://mediaspace.illinois.edu/media/t/1_i5nljr0x
 
